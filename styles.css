@@ -659,3 +659,73 @@ footer .img-logo-footer{
     }
 
 }
+
+
+/* ===== CORREÇÃO DO CORTE NO CELULAR ===== */
+
+/* Ajuste principal do header para telas pequenas */
+@media screen and (max-width: 950px) {
+    header {
+        height: auto !important;  /* Remove a altura fixa */
+        min-height: 100vh;        /* Mantém no mínimo a tela toda */
+        padding-bottom: 40px;     /* Espaço extra no final */
+    }
+    
+    .img-logo {
+        width: 80% !important;
+        padding-top: 15% !important;  /* Reduz o padding em telas menores */
+        margin: 0 auto;
+    }
+    
+    header p {
+        width: 90vw !important;
+        font-size: 24px !important;
+        margin: 20px auto 0px auto !important;
+    }
+    
+    header button {
+        margin: 40px auto 20px auto !important;
+        width: 90% !important;
+    }
+}
+
+/* Ajuste específico para telas muito pequenas (584px) */
+@media screen and (max-width: 584px) {
+    .img-logo {
+        padding-top: 20% !important;
+    }
+    
+    header p {
+        font-size: 20px !important;
+    }
+}
+
+/* Ajuste para telas de 400px (onde você colocou width: 0% na imagem) */
+@media screen and (max-width: 400px) {
+    .img-logo {
+        width: 70% !important;  /* Muda de 0% para 70% */
+        padding-top: 25% !important;
+    }
+    
+    header {
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+    
+    header p {
+        font-size: 18px !important;
+        width: 95% !important;
+    }
+}
+
+/* Ajuste para telas de 350px */
+@media screen and (max-width: 350px) {
+    .img-logo {
+        width: 80% !important;
+        padding-top: 30% !important;
+    }
+    
+    header p {
+        font-size: 16px !important;
+    }
+}
