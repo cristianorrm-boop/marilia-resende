@@ -661,71 +661,100 @@ footer .img-logo-footer{
 }
 
 
-/* ===== CORREÇÃO DO CORTE NO CELULAR ===== */
+/* ===== CORREÇÃO: Primeira seção ocupa a tela toda no celular ===== */
 
-/* Ajuste principal do header para telas pequenas */
+/* Ajuste principal para tablets e celulares */
 @media screen and (max-width: 950px) {
     header {
-        height: auto !important;  /* Remove a altura fixa */
-        min-height: 100vh;        /* Mantém no mínimo a tela toda */
-        padding-bottom: 40px;     /* Espaço extra no final */
+        height: 100vh !important;  /* Força a altura total da tela */
+        min-height: 100vh !important;
+        max-height: 100vh !important;  /* Impede que ultrapasse */
+        overflow-y: auto !important;   /* Permite rolar se necessário */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;  /* Centraliza verticalmente */
     }
     
     .img-logo {
-        width: 80% !important;
-        padding-top: 15% !important;  /* Reduz o padding em telas menores */
-        margin: 0 auto;
+        width: 60% !important;
+        padding-top: 0 !important;
+        margin-top: -50px !important;  /* Ajuste para centralizar melhor */
     }
     
     header p {
-        width: 90vw !important;
-        font-size: 24px !important;
+        width: 85vw !important;
+        font-size: 22px !important;
         margin: 20px auto 0px auto !important;
+        padding: 0 15px !important;
     }
     
     header button {
-        margin: 40px auto 20px auto !important;
-        width: 90% !important;
+        margin: 30px auto 40px auto !important;
+        width: 80% !important;
+        padding: 12px 20px !important;
     }
 }
 
-/* Ajuste específico para telas muito pequenas (584px) */
+/* Ajuste para celulares médios (584px) */
 @media screen and (max-width: 584px) {
+    header {
+        justify-content: center !important;
+    }
+    
     .img-logo {
-        padding-top: 20% !important;
+        width: 75% !important;
+        margin-top: -30px !important;
     }
     
     header p {
         font-size: 20px !important;
+        width: 90% !important;
+    }
+    
+    header button {
+        width: 85% !important;
+        margin: 25px auto 30px auto !important;
     }
 }
 
-/* Ajuste para telas de 400px (onde você colocou width: 0% na imagem) */
+/* Ajuste para celulares pequenos (400px) */
 @media screen and (max-width: 400px) {
-    .img-logo {
-        width: 70% !important;  /* Muda de 0% para 70% */
-        padding-top: 25% !important;
+    header {
+        justify-content: center !important;
     }
     
-    header {
-        min-height: auto;
-        padding-bottom: 60px;
+    .img-logo {
+        width: 80% !important;
+        margin-top: -20px !important;
     }
     
     header p {
         font-size: 18px !important;
         width: 95% !important;
     }
+    
+    header button {
+        width: 90% !important;
+        padding: 10px 15px !important;
+    }
+    
+    .link-contact {
+        font-size: 14px !important;
+    }
 }
 
-/* Ajuste para telas de 350px */
+/* Ajuste para celulares muito pequenos (350px) */
 @media screen and (max-width: 350px) {
     .img-logo {
-        width: 80% !important;
-        padding-top: 30% !important;
+        width: 85% !important;
+        margin-top: -10px !important;
     }
     
     header p {
         font-size: 16px !important;
+    }
+    
+    header button {
+        padding: 8px 12px !important;
     }
 }
