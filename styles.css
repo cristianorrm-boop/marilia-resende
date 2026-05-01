@@ -265,10 +265,11 @@ footer .img-logo-footer{
     font-weight: 500;
 }
 
-.img-contatos{
+.img-contatos {
     position: relative;
     top: 7px;
     right: 5px;
+    filter: invert(75%) sepia(42%) saturate(550%) hue-rotate(2deg) brightness(92%) contrast(90%);
 }
 
 .texto-footer p{
